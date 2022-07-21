@@ -4,6 +4,7 @@
   <artifactId>java-jetty-webserver-minimal</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
+	<defaultGoal>install</defaultGoal>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
@@ -98,11 +99,16 @@
              </exclusion>
           </exclusions>
       </dependency>
-<dependency>
-	<groupId>com.vaadin</groupId>
-	<artifactId>vaadin-client-compiled</artifactId>
-	<version>${vaadin.version}</version>
-</dependency>
-<!-- Instead of Valo, we use dawn -->
+	<dependency>
+		<groupId>com.vaadin</groupId>
+		<artifactId>vaadin-client-compiled</artifactId>
+		<version>${vaadin.version}</version>
+	</dependency>
+	<dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>4.5.7</version>
+	</dependency>
   </dependencies>
 </project>
